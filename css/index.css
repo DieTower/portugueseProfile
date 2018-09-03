@@ -1,0 +1,555 @@
+@import url('./animation.css');
+
+/* Usefull prefects */
+ul {
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+
+a {
+    color:#000000;
+    text-decoration:none;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    overflow:hidden;
+}
+
+/* Usefull class's */
+.vanish {
+    display:none !important;
+}
+
+.hidden {
+    z-index:-1;
+    visibility:hidden;
+}
+
+/* CSS page style */
+.container {
+    background-color:#f1f1f1;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    width:100%;
+    height:100vh;
+
+    transition-property:all;
+    transition-duration:0.3s;
+
+    display:grid;
+    grid-template-columns:30% 10% 10% 50%;
+    grid-template-rows:50% 50%;
+}
+
+.container.backgroundImg {
+    background-image:url('../img/backgroundImgBlur.jpg');
+}
+
+.container.backgroundImg .callGreenContainer {
+    transform:translateX(0%);
+}
+
+.container.backgroundImg .callRedContainer {
+    transform:translateX(0%);
+}
+
+/* ---- green ---- */
+.greenContainer {
+    grid-column:1/3;
+    grid-row:1/3;
+
+    z-index:1;
+    font-size:16px;
+
+    transform:translateX(-100%);
+
+    transition-property:all;
+    transition-duration:0.5s;
+}
+
+/* Big green container animation */
+@keyframes greenWidthEffect {
+    from { transform:translateX(-100%); }
+    to { transform:translateX(0%); }
+}
+
+.container.backgroundImg .greenBigContainer.greenW {
+    animation-name:greenWidthEffect;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+}
+
+.greenBigContainer {
+    grid-column:1/3;
+    grid-row:1/3;
+
+    width:100vw;
+    height:100vh;
+
+    transform:translateX(-100%);
+}
+
+.callGreenContainer {
+    transform:translateX(-0.1%);
+}
+
+.green {
+    background-color:#10ac84;
+}
+
+.vanishContainer1 {
+    background-color:rgba(0,0,0,0.0);
+    grid-column:1/3;
+    grid-row:1/3;
+    
+    z-index:3;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.vanishContainer1 a {
+    margin:5%;
+    padding:20px;
+
+    color:#10ac84;
+    font-size:3em;
+}
+
+/* ---- yellow ---- */
+.yellowContainer {
+    grid-column:2/4;
+    grid-row:1/3;
+
+    z-index:5;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.yellowContainer .profile {
+    font-size:16px;
+    padding:10px;
+}
+
+@keyframes profileUpEffect {
+    from { transform:translateY(0%); }
+    to { transform:translateY(-160%); }
+}
+
+.profileUp {
+    animation-name:profileUpEffect;
+    animation-duration:0.3s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes profileDownEffect {
+    from { transform:translateY(0%); }
+    to { transform:translateY(170%); }
+}
+
+.profileDown {
+    animation-name:profileDownEffect;
+    animation-duration:0.3s;
+    animation-fill-mode:forwards;
+}
+
+.yellowContainer .profile .img {
+    background-color:#000000;
+    background-size:cover;
+    background-position:cover;
+
+    width:250px;
+    height:250px;
+
+    margin-bottom:10px;
+
+    border:2px solid #f1f1f1;
+    border-radius:5px;
+
+    transition-property:transform;
+    transition-duration:1s;
+}
+
+.img1 {
+    background-image:url("../img/profile.jpg") !important;
+}
+
+.img2 {
+    background-image:url('../img/myLisbon.jpg') !important;
+    background-position:center !important;
+}
+
+.rotateImg {
+    transform:rotate3d(0,1,0,180deg);
+}
+
+.rotateImgBack {
+    transform:rotate3d(0,1,0,0deg);
+}
+
+.yellowContainer .profile ul {
+    background-color:rgba(254, 202, 87,1.0);
+    padding:15px;
+
+    min-height:50px;
+
+    border-radius:5px;
+    border:2px solid #f1f1f1;
+
+    transition-property:height;
+    transition-duration:0.2s;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+@keyframes profileHeightEffect {
+    from { height:50px; }
+    to { height:130px; }
+}
+
+.profileHeight {
+    animation-name:profileHeightEffect;
+    animation-duration:0.2s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes profileHeightEffectNull {
+    0% { height:130px; }
+    50% { height:50px; }
+    100% { height:auto; }
+}
+
+.profileHeightNull {
+    animation-name:profileHeightEffectNull;
+    animation-duration:0.2s;
+    animation-fill-mode:forwards;
+}
+
+.yellow {
+    background-color:rgba(254, 202, 87,1.0);
+}
+
+/* Social midia */
+.social {
+    background-color:rgba(0,0,0,0.2);
+    
+    margin-bottom:13px;
+    padding:10px;
+
+    border-radius:4px;
+    font-size:16px;
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.social a {
+    font-size:1.5em;
+    margin:0px 15px;
+}
+
+.social a.github i {
+    color:#2b3137;
+}
+
+.social a.facebook i {
+    color:#3b5998;
+}
+
+.social a.instagram i {
+    color:#cd486b;
+}
+
+.yellowContainer .profile ul li:not(.social) {
+    font-family:"Roboto";
+    font-size:1.2em;
+
+    color:#f1f1f1;
+}
+
+.yellowContainer .profile ul li:last-child {
+    margin-bottom:0px;
+}
+
+.yellowContainer .profile a:not(.aSocial) {
+    margin-left:30px;
+    padding:5px;
+
+    color:rgba(254, 202, 87,1.0);
+    font-size:3em;
+    cursor:pointer;
+
+    transition-property:visibility;
+    transition-duration:0.3s;
+}
+
+/* - Alternative yellow - */
+.yellowContainer.alternative .profile .img {
+    margin-bottom:0px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    border-bottom:1px solid #f1f1f1;
+}
+
+.yellowContainer.alternative .profile ul {
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-top:1px solid #f1f1f1;
+
+    transition-property:all;
+    transition-duration:2s;
+}
+
+/* ---- red ---- */
+.redContainer {
+    grid-column:3/5;
+    grid-row:1/3;
+
+    z-index:2;
+    font-size:16px;
+
+    transform:translateX(110%);
+
+    transition-property:all;
+    transition-duration:0.5s;
+}
+
+/* Big red container animation */
+@keyframes redWidthEffect {
+    from { transform:translateX(110%); }
+    to { transform:translateX(0%); }
+}
+
+.container.backgroundImg .redBigContainer.redW {
+    animation-name:redWidthEffect;
+    animation-duration:0.6s;
+    animation-fill-mode:forwards;
+}
+
+.redBigContainer {
+    grid-column:1/3;
+    grid-row:1/3;
+
+    width:100vw;
+    height:100vh;
+
+    transform:translateX(110%);
+}
+
+.callRedContainer {
+    transform:translateX(0.1%);
+}
+
+.red {
+    background-color:#ee5253;
+}
+
+.vanishContainer2 {
+    background-color:rgba(0,0,0,0.0);
+    grid-column:3/5;
+    grid-row:1/3;
+
+    z-index:4;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.vanishContainer2 a {
+    margin:5%;
+    padding:20px;
+
+    color:#ee5253;
+    font-size:3em;
+}
+
+.lisbon {
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.word1, .word2 {
+    font-family:"Roboto";
+    font-size:4em;
+
+    color:#f1f1f1;
+
+    transform:translateY(360%);
+
+    transition-property:transform;
+    transition-duration:0.7s;
+}
+
+.word1 {
+    position:absolute;
+    bottom:5%;
+    left:6%;
+}
+
+.word2 {
+    position:absolute;
+    bottom:5%;
+    right:10%;
+}
+
+.show {
+    transform:translateY(0%);
+}
+
+@keyframes goForLeftEffect {
+    from { transform:translateX(0%); }
+    to { transform:translateX(-160%); }
+}
+
+.goForLeft {
+    animation-name:goForLeftEffect;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes goForRightEffect {
+    from { transform:translateX(0%); }
+    to { transform:translateX(170%); }
+}
+
+.goForRight {
+    animation-name:goForRightEffect;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes ninetyDegreesEffect {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(180deg); }
+}
+
+.ninetyDegrees {
+    animation-name:ninetyDegreesEffect;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes ninetyDegreesEffectNull {
+    from { transform:rotate(180deg); }
+    to { transform:rotate(0deg); }
+}
+
+.ninetyDegreesNull {
+    animation-name:ninetyDegreesEffectNull;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+
+/* --- Special hey thing --- */
+.hi {
+    grid-column:3/5;
+    grid-row:1/3;
+
+    padding:150px;
+
+    font-size:16px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hi span {
+    margin-bottom:100px;
+    padding:20px;
+
+    font-family:"Roboto";
+    font-size:10em;
+    color:rgba(254, 202, 87,1.0);
+
+    transform:translateY(-300%);
+}
+
+@keyframes hi {
+    from{ transform:translateY(-300%); }
+    to { transform:translateY(0%) }
+}
+
+.hiEntrance {
+    animation-name:hi;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+
+/* Responsive */
+@media(max-width:950px) {
+    .hi {
+        display:none;
+    }
+}
+
+@media(max-width:850px) {
+    .word1 {
+        font-size:2em;
+    }
+
+    .word2 {
+        font-size:2em;
+    }
+}
+
+@media(max-width:490px) {
+    .container {
+        grid-template-columns:40% 10% 10% 40%;
+    }
+
+    .greenContainer, .redContainer {
+        display:none;
+    }
+
+    .vanishContainer1, .vanishContainer2 {
+        cursor:context-menu;
+    }
+
+    .greenArrow, .redArrow {
+        display:none;
+    }
+
+    .word1, .word2 {
+        padding:10px;
+        font-size:1.8em;
+
+        cursor:pointer;
+
+        border-radius:4px;
+        transform:translate(0px);
+    }
+
+    .word1 {
+        background-color:#10ac84;
+    }
+
+    .word2 {
+        background-color:#ee5253;
+    }
+}
+
+@media(max-width:380px) {
+    .word1 {
+        bottom:auto;
+        top:5%;
+    }
+}

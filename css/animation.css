@@ -1,0 +1,28 @@
+/* Animations */
+
+/* First one's animations */
+@keyframes profileEffect {
+    from { transform:translateY(-100%); }
+    to { transform:translateY(0%); }
+}
+
+.profileEffect {
+    animation-name:profileEffect;
+    animation-duration:0.4s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes opacityAnimation {
+    0% { opacity:0;  }
+    25% { opacity:1.0; }
+    50% { opacity:0; }
+    75% { opacity:1.0; }
+    100% { opacity:0; }
+}
+
+.arrowAnimation {
+    animation-name:opacityAnimation;
+    animation-duration:2.5s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+}

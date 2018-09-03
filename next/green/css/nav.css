@@ -1,0 +1,131 @@
+/* First effect of nav */
+@keyframes navFirstOneEffect {
+    0% { transform:translateY(-100%); box-shadow:0px 0px 0px #000000; }
+    50% { transform:translateY(0%); box-shadow:0px 0px 0px #000000; }
+    100% { transform:translateY(0%); box-shadow:2px 0px 5px #000000; }
+}
+
+.navFirstOne {
+    animation-name:navFirstOneEffect;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+}
+
+/* --- nav --- */
+main nav {
+    background-color:#f1f1f1;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+    grid-column:1/2;
+    grid-row:1/5;
+    
+    min-width:350px;
+
+    padding:20px;
+    font-size:16px;
+
+    z-index:2;
+    transform:translateY(-100%);
+
+    display:flex;
+    flex-direction:column;
+}
+
+@keyframes firstOnePEffect {
+    from { transform:translateX(-100%); }
+    to { transform:translateX(0%); }
+}
+
+.firstOneP {
+    animation-name:firstOnePEffect;
+    animation-duration:1.1s;
+    animation-fill-mode:forwards;
+}
+
+main nav p {
+    margin:10px;
+    margin-top:20px;
+    padding:5px;
+
+    text-shadow:1px 1px 2px #000000;
+
+    cursor:context-menu;
+    transform:translateX(-100%);
+
+    font-weight:700;
+    font-family:"Roboto";
+    font-size:4em;
+    color:#10ac84;
+
+    transition-property:font-size;
+    transition-duration:0.3s;
+}
+
+@keyframes firstOneUlEffect {
+    from { transform:translateX(-100%); }
+    to { transform:translateX(0%); }
+}
+
+.firstOneUl {
+    animation-name:firstOneUlEffect;
+    animation-duration:1.2s;
+    animation-fill-mode:forwards;
+}
+
+main nav ul {
+    width:90%;
+    padding:5%;
+
+    transform:translateX(-100%);
+}
+
+main nav ul li {
+    width:80%;
+
+    padding-left:13px;
+    padding-bottom:10px;
+    border-bottom:2px solid #000000;
+
+    font-family:"Roboto";
+    font-size:1.5em;
+
+    margin-bottom:20px;
+    cursor:context-menu;
+
+    transition-property:font-size;
+    transition-duration:0.3s;
+}
+
+main nav ul li.up {
+    transform:scale(1.3);
+}
+
+main nav ul li:last-child {
+    margin-bottom:0px;
+}
+
+.greenLi {
+    border-color:#10ac84;
+    color:#10ac84;
+}
+
+/* -- nav responsive -- */
+@media(max-width:1600px) {
+    main nav p { font-size:3em; }
+    main nav ul li { font-size:1.2em; }
+    main nav { min-width:300px; }
+}
+
+@media(max-width:1300px) {
+    main nav p { font-size:2.5em; }
+    main nav ul li { font-size:1em; }
+    main nav { min-width:250px; }
+}
+
+@media(max-width:1200px) {
+    main nav p { font-size:2em; }
+    main nav ul li { font-size:0.8em; margin-bottom:10px; }
+    main nav { min-width:100px; }
+}

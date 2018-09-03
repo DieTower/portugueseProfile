@@ -1,0 +1,124 @@
+@keyframes back1FirstEffect {
+    from { transform:translateX(100%); }
+    to { transform:translateX(0%); }
+}
+
+.back1FirstOne {
+    animation-name:back1FirstEffect;
+    animation-duration:0.4s;
+    animation-fill-mode:forwards;
+}
+
+.back1, .back2, .back3 {
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.back1 {
+    position:absolute;
+    right:0px;
+    top:30%;
+
+    margin:0px;
+    padding:40px;
+
+    transform:translateX(100%);
+
+    font-size:2.2em;
+    color:#f1f1f1;
+}
+
+.back2 {
+    visibility:hidden;
+    position:absolute;
+    right:10%;
+    bottom:5px;
+
+    margin:5px;
+    padding:20px;
+
+    font-size:2.5em;
+    color:#10ac84;
+    /* color:rgba(254, 202, 87,1.0); */
+}
+
+.back3 {
+    visibility:hidden;
+    position:absolute;
+    right:10%;
+    bottom:5px;
+
+    margin:5px;
+    padding:20px;
+
+    font-size:2.5em;
+    color:#10ac84;
+    /* color:rgba(254, 202, 87,1.0); */
+}
+
+.oldImg {
+    position:absolute;
+    
+    width:100vw;
+    height:100vh;
+
+    z-index:-1;
+
+    background-image:url('../../../img/backgroundImgBlur.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+/* Effects */
+@keyframes getOutForLeftEffect {
+    from { transform:translateX(0%); }
+    to { transform:translateX(-110%); }
+}
+
+.getOutLeft {
+    animation-name:getOutForLeftEffect;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes getOutForTopEffect {
+    from { transform:translateY(0%); }
+    to { transform:translateY(-110%); }
+}
+
+.getOutTop {
+    animation-name:getOutForTopEffect;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+/* Responsive */
+@media(max-width:1200px) {
+    .back1 {
+        display:none;
+    }
+
+    .back2 {
+        visibility:visible;
+    }
+}
+
+@media(max-width:940px) {
+    .back2 {
+        visibility:hidden;
+    }
+    
+    .back3 {
+        visibility:visible;
+
+        top:50%;
+        bottom:auto;
+        left:auto;
+        right:0px;
+    }
+}

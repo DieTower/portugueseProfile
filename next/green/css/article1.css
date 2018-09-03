@@ -1,0 +1,165 @@
+/* First effect of section */
+@keyframes sectionFirstOneEffect {
+    0% { transform:translateY(-100%); }
+    50% { transform:translateY(0%); }
+    100% { transform:translateY(0%); }
+}
+
+.sectionFirstOne {
+    animation-name:sectionFirstOneEffect;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+
+/* --- section --- */
+main section {
+    grid-column:2/4;
+    grid-row:1/5;
+
+    z-index:1;
+    overflow-Y:auto;
+    margin:10px;
+    padding:30px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+@media(max-width:1200px) {
+    main section { grid-column:2/5; }
+}
+
+main section article {
+    background-color:rgba(255, 255, 255, 0.3);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:cover;
+    width:90%;
+
+    margin-bottom:10px;
+    padding:20px;
+
+    border-radius:4px;
+    font-size:16px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* --- Article minimum size --- */
+main section article:nth-child(1) {
+    min-height:160px;
+}
+
+main section article:nth-child(2) {
+    min-height:350px;
+}
+
+main section article:nth-child(3) {
+    min-height:250px;
+}
+
+
+main section .movies.img1 {
+    background-image:url('../img/darkKnight1.jpeg');
+    background-position:0px 5%;
+}
+
+main section .movies.img2 {
+    background-image:url('../img/citizenKane.jpg');
+    background-position:0px 15%;
+}
+
+main section article ul {
+    padding:5px;
+    overflow-Y:auto;
+}
+
+main section article ul li {
+    margin-bottom:10px;
+    padding:5px;
+
+    font-family:"Roboto";
+    font-size:1.5em;
+    color:#f1f1f1;
+
+    border-radius:4px;
+
+    line-height:30px;
+    cursor:context-menu;
+}
+
+main section article ul li.moviesLi {
+    background-color:rgba(16, 172, 132, 0.8);
+}
+
+main section article ul li span {
+    cursor:pointer;
+}
+
+.underLine {
+    text-decoration:underline;
+}
+
+/* scrollbar section style ------------- */
+main ::-webkit-scrollbar {
+    width:3px;
+}
+
+main ::-webkit-scrollbar-track {
+    background-color:#f1f1f1;
+    border-radius:40px;
+}
+
+main ::-webkit-scrollbar-track-piece {
+    background-color:none;
+    border-radius:40px;
+}
+
+main ::-webkit-scrollbar-thumb {
+    background-color:#3b3b3b;
+    border-radius:40px;
+}
+
+@media(max-width:940px) {
+    main {
+        display:grid;
+        grid-template-columns:repeat(4,25%);
+        grid-template-rows:120px repeat(3,25%);
+    }
+
+    main nav {
+        background-color:#f1f1f1;
+        grid-column:1/5;
+        grid-row:1/2;
+    }
+
+    main nav p {
+        font-size:3em;
+        border:none;
+    }
+
+    main nav ul {
+        display:none;
+    }
+
+    main section {
+        grid-column:1/5;
+        grid-row:2/5;
+    }
+}
+
+@media(max-width:600px) {
+    main nav p {
+        font-size:2.5em;
+    }
+}
+
+@media(max-width:460px) {
+    main nav p {
+        font-size:2em;
+    }
+}

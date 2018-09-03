@@ -1,0 +1,74 @@
+.tvShows {
+
+}
+
+.tvShows ul {
+    overflow-x:hidden;
+    width:100% !important;
+}
+
+.tvShowsText {
+    width:100% !important;
+}
+
+.tvShowsBox {
+    
+}
+
+.tvShowsBox .tvShowsPosters {
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.tvShowsBox .tvShowsPosters li {
+    min-width:100px !important;
+    height:160px;
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    margin:0px;
+    margin-right:10px;
+
+    cursor:pointer;
+    transition-property:transform;
+    transition-duration:0.2s;
+}
+
+.tvShowsBox .tvShowsPosters li:hover {
+    transform:scale(2);
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(2):hover{
+    background-position:-40%;
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(1) {
+    background-image:url('../img/mrRobot.jpg');
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(2) {
+    background-image:url('../img/breackingBad.jpg');
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(3) {
+    background-image:url('../img/gameOfThrones.jpg');
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(4) {
+    background-image:url('../img/westworld.jpg');
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(5) {
+    background-image:url('../img/theEndOfTheFuckingWorld.jpg');
+}
+
+.tvShowsBox .tvShowsPosters li:nth-child(6) {
+    background-image:url('../img/blackMirror.jpg');
+}

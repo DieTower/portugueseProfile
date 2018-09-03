@@ -1,0 +1,121 @@
+.travel {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.travel ul {
+
+}
+
+.travelText {
+    padding-top:0px;
+}
+
+.travelBox {
+
+}
+
+.travelCountrys {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.travelCountrys li {
+    background-color:rgba(0,0,0,0.5);
+    width:auto;
+    height:auto;
+
+    padding:8px 13px;
+    margin-right:10px;
+
+    font-size:16px;
+    cursor:pointer;
+
+    transition-property:background-color;
+    transition-duration:0.3s;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.travelCountrys li span {
+    font-size:1.1em;
+    color:#f1f1f1;
+    text-shadow:0px 0px 2px #000000;
+}
+
+
+/* Country colors */
+.spainColor {
+    background-color:rgba(255, 196, 0, 0.9) !important;
+}
+
+.spainColor:hover {
+    background-color:rgba(255, 196, 0, 0.7) !important;
+}
+
+.norwayColor {
+    background-color:rgba(239, 43, 45, 0.9) !important;
+}
+
+.norwayColor:hover {
+    background-color:rgba(239, 43, 45, 0.7) !important;
+}
+
+.englandColor {
+    background-color:rgba(0, 36, 125, 0.9) !important;
+}
+
+.englandColor:hover {
+    background-color:rgba(0, 36, 125, 0.7) !important;
+}
+
+.czechColor {
+    background-color:rgba(17, 69, 126, 0.9) !important;
+}
+
+.czechColor:hover {
+    background-color:rgba(17, 69, 126, 0.7) !important;
+}
+
+.hungaryColor {
+    background-color:rgba(67, 111, 77, 0.9) !important;
+}
+
+.hungaryColor:hover {
+    background-color:rgba(67, 111, 77, 0.7) !important;
+}
+
+
+/* Countrys images */
+nav.navFirstOne.spainImg {
+    background-image:url('../img/countrys/spain.jpg');
+}
+
+nav.navFirstOne.norwayImg {
+    background-image:url('../img/countrys/norway.jpg');
+}
+
+nav.navFirstOne.englandImg {
+    background-image:url('../img/countrys/england.jpg');
+}
+
+nav.navFirstOne.czechImg {
+    background-image:url('../img/countrys/czech.jpg');
+}
+
+nav.navFirstOne.hungaryImg {
+    background-image:url('../img/countrys/hungary.jpg');
+}
+
+nav.navFirstOne.spainImg li, nav.navFirstOne.norwayImg li, nav.navFirstOne.englandImg li, nav.navFirstOne.czechImg li, nav.navFirstOne.hungaryImg li {
+    color:#f1f1f1;
+    border-bottom:2px solid #f1f1f1;
+    border-left:0px;
+    text-shadow:0px 0px 5px #000000;
+}
