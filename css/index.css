@@ -524,11 +524,24 @@ body {
         cursor:context-menu;
     }
 
-    .greenArrow, .redArrow {
-        display:none;
+    .vanishContainer1 {
+        align-items:flex-start;
+    }
+
+    .vanishContainer2 {
+        align-items:flex-end;
+    }
+
+    .greenArrow {
+        transform:rotate(180deg);
+    }
+
+    .redArrow {
+        transform:rotate(-180deg);
     }
 
     .word1, .word2 {
+        display:none;
         padding:10px;
         font-size:1.8em;
 
